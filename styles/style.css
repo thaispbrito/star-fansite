@@ -1,0 +1,169 @@
+
+:root {
+  --background:
+    radial-gradient(circle at 20% 20%, rgba(120, 87, 220, 0.25) 0 2px, transparent 3px),
+    radial-gradient(circle at 80% 30%, rgba(255, 209, 102, 0.8) 0 1px, transparent 2px),
+    radial-gradient(circle at 60% 80%, rgba(255, 255, 255, 0.7) 0 1px, transparent 2px),
+    linear-gradient(135deg, #050713, #111a3d 55%, #09051b);
+
+  --text: #f7f4ff;
+  --muted-text: #c6c8e3;
+  --card: rgba(25, 32, 75, 0.8);
+  --heading: #ffd166;
+  --accent: #a78bfa;
+  --button-text: #171126;
+  --border: rgba(167, 139, 250, 0.35);
+  --focus: #f7f4ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 48px 20px;
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: var(--background);
+  background-size: 180px 180px, 240px 240px, 140px 140px, cover;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+body.cosmic-night {
+  --background:
+    radial-gradient(circle at 20% 20%, rgba(120, 87, 220, 0.25) 0 2px, transparent 3px),
+    radial-gradient(circle at 80% 30%, rgba(255, 209, 102, 0.8) 0 1px, transparent 2px),
+    radial-gradient(circle at 60% 80%, rgba(255, 255, 255, 0.7) 0 1px, transparent 2px),
+    linear-gradient(135deg, #050713, #111a3d 55%, #09051b);
+
+  --text: #f7f4ff;
+  --muted-text: #c6c8e3;
+  --card: rgba(25, 32, 75, 0.8);
+  --heading: #ffd166;
+  --accent: #a78bfa;
+  --button-text: #171126;
+  --border: rgba(167, 139, 250, 0.35);
+  --focus: #f7f4ff;
+}
+
+body.celestial-day {
+  --background: linear-gradient(135deg, #dff6ff, #fff4c2);
+  --text: #24304a;
+  --muted-text: #4d5b73;
+  --card: rgba(255, 255, 255, 0.75);
+  --heading: #c27b00;
+  --accent: #4267a8;
+  --button-text: #ffffff;
+  --border: rgba(66, 103, 168, 0.3);
+  --focus: #24304a;
+}
+
+main {
+  width: min(100%, 760px);
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 0 12px;
+  color: var(--heading);
+  font-size: clamp(1.35rem, 5vw, 2.8rem);
+  line-height: 1.1;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 0 12px rgba(255, 209, 102, 0.7);
+}
+
+main > p {
+  margin: 0 auto 32px;
+  color: var(--muted-text);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+section {
+  margin: 20px 0;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+ol {
+  padding-left: 28px;
+}
+
+li {
+  margin: 12px 0;
+  color: var(--muted-text);
+}
+
+li::marker {
+  color: var(--heading);
+  font-weight: bold;
+}
+
+#facts__fact--important {
+  color: var(--heading);
+  font-weight: bold;
+}
+
+button {
+  display: block;
+  margin: 12px auto;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--button-text);
+  background: var(--heading);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(255, 209, 102, 0.45);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.4s ease,
+    color 0.4s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 28px rgba(255, 209, 102, 0.8);
+}
+
+button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+
+.theme-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.theme-controls h2 {
+  flex-basis: 100%;
+}
+
+.theme-controls button {
+  display: inline-block;
+  margin: 0;
+}
+
+#starCount {
+  color: var(--heading);
+  text-align: center;
+}
